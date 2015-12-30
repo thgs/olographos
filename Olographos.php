@@ -1,17 +1,19 @@
 <?php 
-// I wrote this a while ago, now went through it all wrapping it in a class.
-// Has some introspective comments :)
 
 class Olographos
 {
-    /***************************************************************************
-     | Olographos class
-     |
-     |
-     | Limitations: max number is 999,999.99
-     | 
-     | 
-     */
+   /*
+    | Olographos class
+    |-=-=-=-=-=-=-=-=-=-
+    |
+    | I wrote this a while ago, now went through it all wrapping it in a class.
+	| Has some introspective comments :)
+	|
+    |
+    | Limitations: max number is 999,999.99
+    | 
+    | Version: 0.1b - Improved comments and whitespace :)
+   */
 	
 	
 	const STR_EURO      = 'ΕΥΡΩ';
@@ -20,84 +22,79 @@ class Olographos
 	const STR_THOUSANDS = 'ΧΙΛΙΑΔΕΣ';
 
 	
-	
-	protected static $representations =
-	    [
-      '0'			=>	'',
-			'1'			=>	'ΕΝΑ',
-			'2'			=>	'ΔΥΟ',
-			'3'			=>	'ΤΡΙΑ',
-			'4'			=>	'ΤΕΣΣΕΡΑ',
-			'5'			=>	'ΠΕΝΤΕ',
-			'6'			=>	'ΕΞΙ',
-			'7'			=>	'ΕΠΤΑ',
-			'8'			=>	'ΟΚΤΩ',
-			'9'			=>	'ΕΝΝΙΑ',
-			'10'		=>	'ΔΕΚΑ',
-			'11'		=>	'ΕΝΤΕΚΑ',
-			'12'		=>	'ΔΩΔΕΚΑ',
-			'13'		=>	'ΔΕΚΑ ΤΡΙΑ',
-			'14'		=>	'ΔΕΚΑ ΤΕΣΣΕΡΑ',
-			'15'		=>	'ΔΕΚΑ ΠΕΝΤΕ',
-			'16'		=>	'ΔΕΚΑ ΕΞΙ',
-			'17'		=>	'ΔΕΚΑ ΕΠΤΑ',
-			'18'		=>	'ΔΕΚΑ ΟΚΤΩ',
-			'19'		=>	'ΔΕΚΑ ΕΝΝΙΑ',
-			'20'		=>	'ΕΙΚΟΣΙ',
-			'30'		=>	'ΤΡΙΑΝΤΑ',
-			'40'		=>	'ΣΑΡΑΝΤΑ',
-			'50'		=>	'ΠΕΝΗΝΤΑ',
-			'60'		=>	'ΕΞΗΝΤΑ',
-			'70'		=>	'ΕΒΔΟΜΗΝΤΑ',
-			'80'		=>	'ΟΓΔΟΝΤΑ',
-			'90'		=>	'ΕΝΕΝΗΝΤΑ',
-			'100'		=>	'ΕΚΑΤΟ',
-			'200'		=>	'ΔΙΑΚΟΣΙΑ',
-			'300'		=>	'ΤΡΙΑΚΟΣΙΑ',
-			'400'		=>	'ΤΕΤΡΑΚΟΣΙΑ',
-			'500'		=>	'ΠΕΝΤΑΚΟΣΙΑ',
-			'600'		=>	'ΕΞΑΚΟΣΙΑ',
-			'700'		=>	'ΕΠΤΑΚΟΣΙΑ',
-			'800'		=>	'ΟΚΤΑΚΟΣΙΑ',
-			'900'		=>	'ΕΝΝΙΑΚΟΣΙΑ',
-			'1000'		=> 	'ΧΙΛΙΑ'
-	    ];
+	protected static $representations = [
+		'0'			=>	'',
+		'1'			=>	'ΕΝΑ',
+		'2'			=>	'ΔΥΟ',
+		'3'			=>	'ΤΡΙΑ',
+		'4'			=>	'ΤΕΣΣΕΡΑ',
+		'5'			=>	'ΠΕΝΤΕ',
+		'6'			=>	'ΕΞΙ',
+		'7'			=>	'ΕΠΤΑ',
+		'8'			=>	'ΟΚΤΩ',
+		'9'			=>	'ΕΝΝΙΑ',
+		'10'		=>	'ΔΕΚΑ',
+		'11'		=>	'ΕΝΤΕΚΑ',
+		'12'		=>	'ΔΩΔΕΚΑ',
+		'13'		=>	'ΔΕΚΑ ΤΡΙΑ',
+		'14'		=>	'ΔΕΚΑ ΤΕΣΣΕΡΑ',
+		'15'		=>	'ΔΕΚΑ ΠΕΝΤΕ',
+		'16'		=>	'ΔΕΚΑ ΕΞΙ',
+		'17'		=>	'ΔΕΚΑ ΕΠΤΑ',
+		'18'		=>	'ΔΕΚΑ ΟΚΤΩ',
+		'19'		=>	'ΔΕΚΑ ΕΝΝΙΑ',
+		'20'		=>	'ΕΙΚΟΣΙ',
+		'30'		=>	'ΤΡΙΑΝΤΑ',
+		'40'		=>	'ΣΑΡΑΝΤΑ',
+		'50'		=>	'ΠΕΝΗΝΤΑ',
+		'60'		=>	'ΕΞΗΝΤΑ',
+		'70'		=>	'ΕΒΔΟΜΗΝΤΑ',
+		'80'		=>	'ΟΓΔΟΝΤΑ',
+		'90'		=>	'ΕΝΕΝΗΝΤΑ',
+		'100'		=>	'ΕΚΑΤΟ',
+		'200'		=>	'ΔΙΑΚΟΣΙΑ',
+		'300'		=>	'ΤΡΙΑΚΟΣΙΑ',
+		'400'		=>	'ΤΕΤΡΑΚΟΣΙΑ',
+		'500'		=>	'ΠΕΝΤΑΚΟΣΙΑ',
+		'600'		=>	'ΕΞΑΚΟΣΙΑ',
+		'700'		=>	'ΕΠΤΑΚΟΣΙΑ',
+		'800'		=>	'ΟΚΤΑΚΟΣΙΑ',
+		'900'		=>	'ΕΝΝΙΑΚΟΣΙΑ',
+		'1000'		=> 	'ΧΙΛΙΑ'
+	];
 	
 	    
-	protected static $thousand_corrections =
-	    [
-			'ΔΙΑΚΟΣΙΑ'		=>	'ΔΙΑΚΟΣΙΕΣ',
-			'ΤΡΙΑΚΟΣΙΑ'		=>	'ΤΡΙΑΚΟΣΙΕΣ',
-			'ΤΕΤΡΑΚΟΣΙΑ'	=>	'ΤΕΤΡΑΚΟΣΙΕΣ',
-			'ΠΕΝΤΑΚΟΣΙΑ'	=>	'ΠΕΝΤΑΚΟΣΙΕΣ',
-			'ΕΞΑΚΟΣΙΑ'		=>	'ΕΞΑΚΟΣΙΕΣ',
-			'ΕΠΤΑΚΟΣΙΑ'		=>	'ΕΠΤΑΚΟΣΙΕΣ',
-			'ΟΚΤΑΚΟΣΙΑ'		=>	'ΟΚΤΑΚΟΣΙΕΣ',
-			'ΕΝΝΙΑΚΟΣΙΑ'	=>	'ΕΝΝΙΑΚΟΣΙΕΣ'
-	    ];
+	protected static $thousand_corrections = [
+		'ΔΙΑΚΟΣΙΑ'		=>	'ΔΙΑΚΟΣΙΕΣ',
+		'ΤΡΙΑΚΟΣΙΑ'		=>	'ΤΡΙΑΚΟΣΙΕΣ',
+		'ΤΕΤΡΑΚΟΣΙΑ'	=>	'ΤΕΤΡΑΚΟΣΙΕΣ',
+		'ΠΕΝΤΑΚΟΣΙΑ'	=>	'ΠΕΝΤΑΚΟΣΙΕΣ',
+		'ΕΞΑΚΟΣΙΑ'		=>	'ΕΞΑΚΟΣΙΕΣ',
+		'ΕΠΤΑΚΟΣΙΑ'		=>	'ΕΠΤΑΚΟΣΙΕΣ',
+		'ΟΚΤΑΚΟΣΙΑ'		=>	'ΟΚΤΑΚΟΣΙΕΣ',
+		'ΕΝΝΙΑΚΟΣΙΑ'	=>	'ΕΝΝΙΑΚΟΣΙΕΣ'
+	];
 	
-	protected static $grammar_corrections =
-	    [
+	protected static $grammar_corrections = [
     	'ΕΝΑ ΧΙΛΙΑΔΕΣ'	    => 'ΧΙΛΙΑ',
-			' ΕΝΑ ΧΙΛΙΑΔΕΣ'	    => ' ΜΙΑ ΧΙΛΙΑΔΕΣ',
-			'ΕΚΑΤΟ '		    => 'ΕΚΑΤΟΝ ',
-			'ΤΡΙΑ ΧΙΛΙΑΔΕΣ'     => 'ΤΡΕΙΣ ΧΙΛΙΑΔΕΣ',
-			'ΤΕΣΣΕΡΑ ΧΙΛΙΑΔΕΣ'  => 'ΤΕΣΣΕΡΙΣ ΧΙΛΙΑΔΕΣ'    
-	    ];
+		' ΕΝΑ ΧΙΛΙΑΔΕΣ'	    => ' ΜΙΑ ΧΙΛΙΑΔΕΣ',
+		'ΕΚΑΤΟ '		    => 'ΕΚΑΤΟΝ ',
+		'ΤΡΙΑ ΧΙΛΙΑΔΕΣ'     => 'ΤΡΕΙΣ ΧΙΛΙΑΔΕΣ',
+		'ΤΕΣΣΕΡΑ ΧΙΛΙΑΔΕΣ'  => 'ΤΕΣΣΕΡΙΣ ΧΙΛΙΑΔΕΣ'    
+	];
 	
 	
 	
-    
-    public static function nt_prim($n, $append = FALSE) {
-
-		 // if $n is not a number return false and exit function
-    if(!is_numeric($n)) return false;
+    public static function nt_prim($n, $append = FALSE) 
+    {
+        // if $n is not a number return false and exit function
+        if (!is_numeric($n)) return false;
 		
 		// case $n contains thousands
 		if ($n > 1000) 
 		{
 			// process thousands recursively and correct any mistakes in representation
-			// due to thousands word (xiliades)
+			// due to thousands word in greek (xiliades)
 			$tnum    = (int) ($n / 1000);
 			$pretext = strtr(
 			    self::number_text($tnum).' '.self::STR_THOUSANDS.' ', 
@@ -105,7 +102,8 @@ class Olographos
         	);
 			
 			// remove thousands from number
-			while ($n >= 1000) $n -= 1000;
+			# 0.1-old code: while ($n >= 1000) $n -= 1000;
+			$n = $n % 1000;
 		}
 		
 		// case $n is exactly 1000
@@ -116,14 +114,13 @@ class Olographos
 			// why not return here ?
 		}
 		
-		
 		$text = (isset($pretext)) ? $pretext : '';
-		
 		
 		// look for the closest representation, performing one iteration 
 		// over all representations
 		$plimit = 0;
-		foreach (self::$representations as $limit => $desc) {
+		foreach (self::$representations as $limit => $desc) 
+		{
 			$ilimit = (int) $limit;
 			
 			if ($ilimit <= $n) 
@@ -143,9 +140,8 @@ class Olographos
 			}
 		}
 		
-		
 		// return
-		return [$n, $text];                                                         # that is a weird return value, regarding $n, which should be 0 ??
+		return [$n, $text];                   # that is a weird return value, regarding $n, which should be 0 ??
 	}
 	
 	
@@ -157,8 +153,8 @@ class Olographos
      * @param       float       $n
      * @returns     string
      */
-	public static function number_text($n) {
-
+	public static function number_text($n) 
+	{
         // dup $n to start getting textual representations
 		$new = $n;
 		
@@ -179,7 +175,6 @@ class Olographos
 		
 		if (substr($ret, $length) == ' '.self::STR_AND.' ')
 			$ret = substr($ret, 0, $length);
-		
 		
 		// return textual representation of $n
 		return $ret;
