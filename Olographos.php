@@ -12,7 +12,7 @@ class Olographos
     |
     |
     | Limitations: max number is 999,999.99
-    | 
+    |
     | Version: 0.1b - Improved comments and whitespace :)
    */
 
@@ -22,62 +22,62 @@ class Olographos
     const STR_THOUSANDS = 'ΧΙΛΙΑΔΕΣ';
 
     protected static $representations = [
-        '0' => '',
-        '1' => 'ΕΝΑ',
-        '2' => 'ΔΥΟ',
-        '3' => 'ΤΡΙΑ',
-        '4' => 'ΤΕΣΣΕΡΑ',
-        '5' => 'ΠΕΝΤΕ',
-        '6' => 'ΕΞΙ',
-        '7' => 'ΕΠΤΑ',
-        '8' => 'ΟΚΤΩ',
-        '9' => 'ΕΝΝΙΑ',
-        '10' => 'ΔΕΚΑ',
-        '11' => 'ΕΝΤΕΚΑ',
-        '12' => 'ΔΩΔΕΚΑ',
-        '13' => 'ΔΕΚΑ ΤΡΙΑ',
-        '14' => 'ΔΕΚΑ ΤΕΣΣΕΡΑ',
-        '15' => 'ΔΕΚΑ ΠΕΝΤΕ',
-        '16' => 'ΔΕΚΑ ΕΞΙ',
-        '17' => 'ΔΕΚΑ ΕΠΤΑ',
-        '18' => 'ΔΕΚΑ ΟΚΤΩ',
-        '19' => 'ΔΕΚΑ ΕΝΝΙΑ',
-        '20' => 'ΕΙΚΟΣΙ',
-        '30' => 'ΤΡΙΑΝΤΑ',
-        '40' => 'ΣΑΡΑΝΤΑ',
-        '50' => 'ΠΕΝΗΝΤΑ',
-        '60' => 'ΕΞΗΝΤΑ',
-        '70' => 'ΕΒΔΟΜΗΝΤΑ',
-        '80' => 'ΟΓΔΟΝΤΑ',
-        '90' => 'ΕΝΕΝΗΝΤΑ',
-        '100' => 'ΕΚΑΤΟ',
-        '200' => 'ΔΙΑΚΟΣΙΑ',
-        '300' => 'ΤΡΙΑΚΟΣΙΑ',
-        '400' => 'ΤΕΤΡΑΚΟΣΙΑ',
-        '500' => 'ΠΕΝΤΑΚΟΣΙΑ',
-        '600' => 'ΕΞΑΚΟΣΙΑ',
-        '700' => 'ΕΠΤΑΚΟΣΙΑ',
-        '800' => 'ΟΚΤΑΚΟΣΙΑ',
-        '900' => 'ΕΝΝΙΑΚΟΣΙΑ',
+        '0'    => '',
+        '1'    => 'ΕΝΑ',
+        '2'    => 'ΔΥΟ',
+        '3'    => 'ΤΡΙΑ',
+        '4'    => 'ΤΕΣΣΕΡΑ',
+        '5'    => 'ΠΕΝΤΕ',
+        '6'    => 'ΕΞΙ',
+        '7'    => 'ΕΠΤΑ',
+        '8'    => 'ΟΚΤΩ',
+        '9'    => 'ΕΝΝΙΑ',
+        '10'   => 'ΔΕΚΑ',
+        '11'   => 'ΕΝΤΕΚΑ',
+        '12'   => 'ΔΩΔΕΚΑ',
+        '13'   => 'ΔΕΚΑ ΤΡΙΑ',
+        '14'   => 'ΔΕΚΑ ΤΕΣΣΕΡΑ',
+        '15'   => 'ΔΕΚΑ ΠΕΝΤΕ',
+        '16'   => 'ΔΕΚΑ ΕΞΙ',
+        '17'   => 'ΔΕΚΑ ΕΠΤΑ',
+        '18'   => 'ΔΕΚΑ ΟΚΤΩ',
+        '19'   => 'ΔΕΚΑ ΕΝΝΙΑ',
+        '20'   => 'ΕΙΚΟΣΙ',
+        '30'   => 'ΤΡΙΑΝΤΑ',
+        '40'   => 'ΣΑΡΑΝΤΑ',
+        '50'   => 'ΠΕΝΗΝΤΑ',
+        '60'   => 'ΕΞΗΝΤΑ',
+        '70'   => 'ΕΒΔΟΜΗΝΤΑ',
+        '80'   => 'ΟΓΔΟΝΤΑ',
+        '90'   => 'ΕΝΕΝΗΝΤΑ',
+        '100'  => 'ΕΚΑΤΟ',
+        '200'  => 'ΔΙΑΚΟΣΙΑ',
+        '300'  => 'ΤΡΙΑΚΟΣΙΑ',
+        '400'  => 'ΤΕΤΡΑΚΟΣΙΑ',
+        '500'  => 'ΠΕΝΤΑΚΟΣΙΑ',
+        '600'  => 'ΕΞΑΚΟΣΙΑ',
+        '700'  => 'ΕΠΤΑΚΟΣΙΑ',
+        '800'  => 'ΟΚΤΑΚΟΣΙΑ',
+        '900'  => 'ΕΝΝΙΑΚΟΣΙΑ',
         '1000' => 'ΧΙΛΙΑ',
     ];
 
     protected static $thousand_corrections = [
-        'ΔΙΑΚΟΣΙΑ' => 'ΔΙΑΚΟΣΙΕΣ',
-        'ΤΡΙΑΚΟΣΙΑ' => 'ΤΡΙΑΚΟΣΙΕΣ',
+        'ΔΙΑΚΟΣΙΑ'   => 'ΔΙΑΚΟΣΙΕΣ',
+        'ΤΡΙΑΚΟΣΙΑ'  => 'ΤΡΙΑΚΟΣΙΕΣ',
         'ΤΕΤΡΑΚΟΣΙΑ' => 'ΤΕΤΡΑΚΟΣΙΕΣ',
         'ΠΕΝΤΑΚΟΣΙΑ' => 'ΠΕΝΤΑΚΟΣΙΕΣ',
-        'ΕΞΑΚΟΣΙΑ' => 'ΕΞΑΚΟΣΙΕΣ',
-        'ΕΠΤΑΚΟΣΙΑ' => 'ΕΠΤΑΚΟΣΙΕΣ',
-        'ΟΚΤΑΚΟΣΙΑ' => 'ΟΚΤΑΚΟΣΙΕΣ',
+        'ΕΞΑΚΟΣΙΑ'   => 'ΕΞΑΚΟΣΙΕΣ',
+        'ΕΠΤΑΚΟΣΙΑ'  => 'ΕΠΤΑΚΟΣΙΕΣ',
+        'ΟΚΤΑΚΟΣΙΑ'  => 'ΟΚΤΑΚΟΣΙΕΣ',
         'ΕΝΝΙΑΚΟΣΙΑ' => 'ΕΝΝΙΑΚΟΣΙΕΣ',
     ];
 
     protected static $grammar_corrections = [
-        'ΕΝΑ ΧΙΛΙΑΔΕΣ' => 'ΧΙΛΙΑ',
-        ' ΕΝΑ ΧΙΛΙΑΔΕΣ' => ' ΜΙΑ ΧΙΛΙΑΔΕΣ',
-        'ΕΚΑΤΟ ' => 'ΕΚΑΤΟΝ ',
-        'ΤΡΙΑ ΧΙΛΙΑΔΕΣ' => 'ΤΡΕΙΣ ΧΙΛΙΑΔΕΣ',
+        'ΕΝΑ ΧΙΛΙΑΔΕΣ'     => 'ΧΙΛΙΑ',
+        ' ΕΝΑ ΧΙΛΙΑΔΕΣ'    => ' ΜΙΑ ΧΙΛΙΑΔΕΣ',
+        'ΕΚΑΤΟ '           => 'ΕΚΑΤΟΝ ',
+        'ΤΡΙΑ ΧΙΛΙΑΔΕΣ'    => 'ΤΡΕΙΣ ΧΙΛΙΑΔΕΣ',
         'ΤΕΣΣΕΡΑ ΧΙΛΙΑΔΕΣ' => 'ΤΕΣΣΕΡΙΣ ΧΙΛΙΑΔΕΣ',
     ];
 
@@ -99,20 +99,20 @@ class Olographos
             );
 
             // remove thousands from number
-            # 0.1-old code: while ($n >= 1000) $n -= 1000;
+            // 0.1-old code: while ($n >= 1000) $n -= 1000;
             $n = $n % 1000;
         }
 
         // case $n is exactly 1000
         if ($n == 1000) {
             $pretext = self::$representations['1000'];
-            $n -= 1000;                                                             # not sure if we need this line
+            $n -= 1000;                                                             // not sure if we need this line
             // why not return here ?
         }
 
         $text = (isset($pretext)) ? $pretext : '';
 
-        // look for the closest representation, performing one iteration 
+        // look for the closest representation, performing one iteration
         // over all representations
         $plimit = 0;
         foreach (self::$representations as $limit => $desc) {
@@ -124,21 +124,21 @@ class Olographos
                 continue;
             } else {
                 // store last found representation
-                $text   .= self::$representations[$plimit];
+                $text .= self::$representations[$plimit];
 
                 // subtract the amount of last used representation from the number
-                $n      -= $plimit;
+                $n -= $plimit;
                 break;
             }
         }
 
         // return
-        return [$n, $text];                   # that is a weird return value, regarding $n, which should be 0 ??
+        return [$n, $text];                   // that is a weird return value, regarding $n, which should be 0 ??
     }
 
     /**
      * Returns a textual representation for a number $n in Greek.
-     * 
+     *
      * @param float $n
      * @returns     string
      */
@@ -172,7 +172,7 @@ class Olographos
 
     /**
      * Returns the textual representation of an amount in Greek.
-     * 
+     *
      * @param float $amount
      * @returns     string
      */
@@ -186,7 +186,7 @@ class Olographos
 
         // add cents part if there is any
         if ($dec > 0) {
-            $txt .=    ' '.self::STR_AND.' '
+            $txt .= ' '.self::STR_AND.' '
                 .self::number_text($dec).' '.self::STR_CENTS;
         }
 
