@@ -1,0 +1,18 @@
+{
+    "name": "thgs/olographos",
+    "description": "A library to transform numbers to textual representation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "thgs",
+            "email": "theogpl57@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "thgs\\Olographos\\": "src/Olographos"
+        }
+    }
+}
