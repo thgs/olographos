@@ -1,5 +1,6 @@
 <?php
 
+namespace thgs\Olographos;
 
 class Olographos
 {
